@@ -15,12 +15,13 @@ This set of scripts will help you to get all tools that you need to be productiv
 ### What is installed
 
 1. Chocolatey - this is the magic that makes "one script" installation possible.
-2. ConEmu - you should be ready to the fact that a lot of things will be done in the console, this is a great alternative to a good ole CMD.
+2. Cmder with ConEmu - you should be ready to the fact that a lot of things will be done in the console, this is a great alternative to a good ole CMD.
 3. NodeJS and NPM - the method of delivery for all these great tools which you'll be using later.
 4. Default set of modules installed globally - bower, yo and its ASP.NET generator, typescript, tsd (access to DefinitelyTyped goodness), gulp and grunt.
 5. GIT.
 6. .NET vNext.
 7. Visual Studio Code.
+8. Atom
 
 ## How to install
 
