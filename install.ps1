@@ -1,3 +1,5 @@
+#$ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Path or $PSScriptRoot
+
 Import-Module .\settings.psm1
 Import-Module .\envy.psm1
 
