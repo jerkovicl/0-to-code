@@ -2,8 +2,8 @@
 $global:root = $env:ALLUSERSPROFILE
 
 # Known locations.
-$global:chocolateyRoot = "$root\.chocolatey"
-$global:chocolateyToolsRoot = "$root\.chocolatey\apps"
+$global:chocolateyRoot = "$root\chocolatey"
+$global:chocolateyToolsRoot = "$root\chocolatey\.chocolatey"
 $global:npmCache = "$root\.npm"
 $global:npmRepository = "$root\.npmrepo"
 $global:dnxRoot = "$env:USERPROFILE\.dnx"
