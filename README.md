@@ -8,7 +8,7 @@ This set of scripts will help you to get all tools that you need to be productiv
 ### Principles of this toolset
 
 1. One script to install all tooling that you need.
-2. All tools will be installed for current user only, whenever possible.
+2. All tools will be installed for all users.
 3. Limited user accounts are supported and UAC elevations are done as part of the installation.
 4. All necessary environment variable changes are made on the user account level.
 
@@ -42,7 +42,7 @@ powershell -Command "& { Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy
 
 You might be seeing a couple of UAC elevation prompts - this is expected: ConEmu and NodeJS are installed globally. At the same time, NPM (package manager for NodeJS) is configured to use paths that are local to the currently logged in user, so "npm install XXX -g" will install "global" module locally to your user account.
 
-By default the installation will use your user profile folder as a "root". If you want to change this, please edit $global:root variable in settings.psm1 before running install.ps1. Be aware that .NET vNext will install into your user profile folder regardless.
+By default the installation will use all user profiles folder as a "root" (C:\ProgramData). If you want to change this, please edit $global:root variable in settings.psm1 before running install.ps1. Be aware that .NET vNext will install into your user profile folder regardless.
 
 After installation completed, please close the command prompt window and open another one, or better yet, start ConEmu. This is required, because changes in the environment variables will not be picked up otherwise. You should expect commands like "choco", "bower", "yo", "npm", "git" and "code" to be available in the new console session.
 
