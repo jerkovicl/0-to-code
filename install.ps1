@@ -18,6 +18,8 @@ Add-Path -scope User -path "$chocolateyToolsRoot"
 
 # Allow uninstallers to be executed.
 choco feature enable --name=autoUninstaller
+# Globally confirm all prompts
+choco feature enable -n allowGlobalConfirmation
 
 # Setup Cmder with ConEmu.
 choco install cmder -pre -y
