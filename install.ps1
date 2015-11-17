@@ -70,4 +70,7 @@ Add-Path -scope User -path "$vscodeRoot"
 ## Install Atom
 choco install atom -y
 
+## Install Git Credential Manager for Windows (GCM)
+choco install gcm -pre
+
 Write-Host "All done! Please close this window and start Cmder."
