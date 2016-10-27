@@ -55,7 +55,7 @@ $gitKeys = Get-ItemProperty -Path $gitRegistryKey
 $gitLocation = $gitKeys.InstallLocation
 if ($gitLocation -ne "") {
   $gitPath = Join-Path $gitLocation "cmd"
-  &"$gitPath\git" config --global credential.helper wincred
+
 }
 
 # Setup .NET.
@@ -71,6 +71,10 @@ Add-Path -scope User -path "$vscodeRoot"
 choco install atom -y
 
 ## Install Git Credential Manager for Windows (GCM)
-choco install gcm -pre
+#choco install gcm -pre
+Write-Host "Installing git credentials manager..."
+$chocolateyRoot | .\Invoke-ElevatedCommand.ps1 { &"$input\bin\choco" install git-credential-manager-for-windows -y }
+git config --global credential.helper manager
+
 
 Write-Host "All done! Please close this window and start Cmder."
